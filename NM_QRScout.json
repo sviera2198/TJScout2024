@@ -1,0 +1,213 @@
+{
+    "$schema": "../schema.json",
+    "title": "QRScout",
+    "page_title": "Crescendo 2024",
+    "sections": [
+        {
+            "name": "Prematch",
+            "preserveDataOnReset": true,
+            "fields": [
+                {
+                    "title": "Scouter Initials",
+                    "type": "text",
+                    "required": true,
+                    "code": "scouter"
+                },
+                {
+                    "title": "Match Number",
+                    "type": "number",
+                    "required": true,
+                    "code": "matchNumber"
+                },
+                {
+                    "title": "Robot",
+                    "type": "select",
+                    "required": true,
+                    "code": "robot",
+                    "choices": {
+                        "Red 1": "R1",
+                        "Red 2": "R2",
+                        "Red 3": "R3",
+                        "Blue 1": "B1",
+                        "Blue 2": "B2",
+                        "Blue 3": "B3"
+                    },
+                    "defaultValue": "Red 1"
+                },
+                {
+                    "title": "Team Number",
+                    "type": "number",
+                    "required": true,
+                    "code": "team"
+                },
+                {
+                    "title": "Robot Position",
+                    "type": "select",
+                    "required": true,
+                    "code": "position",
+                    "choices": {
+                        "Placeholder 1": "Pl 1",
+                        "Placeholder 2": "Pl 2",
+                        "Placeholder 3": "Pl 3"
+                    },
+                    "defaultValue": "Pl 1"
+                }
+            ]
+        },
+        {
+            "name": "Autonomous",
+            "preserveDataOnReset": false,
+            "fields": [
+                {
+                    "title": "Mobility",
+                    "type": "boolean",
+                    "required": false,
+                    "defaultValue": false,
+                    "code": "mobility"
+                },
+                {
+                    "title": "Amp Scored",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "ampA"
+                },
+                {
+                    "title": "Amp Missed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "missedAmpA"
+                },
+                {
+                    "title": "Speaker Scored",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "speakerA"
+                },
+		{
+                    "title": "Speaker Missed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "missedSpeakerA"
+                },
+                {
+                    "title": "Used A-Stop",
+                    "type": "boolean",
+                    "required": false,
+                    "defaultValue": false,
+                    "code": "aStop"
+                }
+            ]
+        },
+        {
+            "name": "Teleop",
+            "fields": [
+                {
+                    "code": "ampT",
+                    "title": "Amp Scored",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "title": "Amp Missed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "missedAmpT"
+                },
+                {
+                    "code": "speakerT",
+                    "title": "Speaker Scored",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "code": "speakerTA",
+                    "title": "Speaker Scored (Amplified)",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "title": "Speaker Missed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "missedSpeakerT"
+                }
+            ]
+        },
+        {
+            "name": "Endgame",
+            "fields": [
+              {
+                "code": "parked",
+                "title": "Parked",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "onstage",
+                "title": "Onstage",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "harmony",
+                "title": "Harmony",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "trap",
+                "title": "Traps Scored",
+                "type": "counter",
+                "defaultValue": 0,
+                "required": false
+              }
+            ]
+        },
+        {
+            "name": "Postmatch",
+            "fields": [
+              {
+                "code": "died",
+                "title": "Died",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "tipped",
+                "title": "Tipped",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "coop",
+                "title": "Coopertition",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+                {
+                    "code": "comments",
+                    "title": "Comments",
+                    "type": "text",
+                    "min": 0,
+                    "max": 50,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
